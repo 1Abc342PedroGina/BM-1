@@ -542,6 +542,7 @@ fd_set close_on_exec;
 	unsigned long swap_cnt;		/* number of pages to swap on next pass */
 	short swap_table;		/* current page table */
 	short swap_page;		/* current page */
+    thread_t	mt;
 #endif NEW_SWAP
 	struct vm_area_struct *stk_vma;
     rb_node_t	rb_node;
