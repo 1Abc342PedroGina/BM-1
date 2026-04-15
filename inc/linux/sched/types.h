@@ -1,4 +1,7 @@
 /* SDPX License Indentifier: GPL-2.0-only */
+#ifndef LINUX_SCHED_TYPES_H
+#define LINUX_SCHED_TYPES_H
+
 #include <kern/thread.h>
 #include "rbtree.h"
 
@@ -545,3 +548,5 @@ fd_set close_on_exec;
     rb_node_linked		rnl;
     struct rb_root 		*rb_root;
 };
+
+#endif
