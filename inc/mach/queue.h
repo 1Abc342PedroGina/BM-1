@@ -13,6 +13,8 @@
 #include <arm/thread.h>
 #else 
 #error "This kernel is not compatibble for others architerture "
+#endif
+
 struct queue_entry {
 	struct queue_entry	*next;		/* next element */
 	struct queue_entry	*prev;		/* previous element */
