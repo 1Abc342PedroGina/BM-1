@@ -541,4 +541,7 @@ fd_set close_on_exec;
 	short swap_page;		/* current page */
 #endif NEW_SWAP
 	struct vm_area_struct *stk_vma;
+    rb_node_t	rb_node;
+    rb_node_linked		rnl;
+    struct rb_root 		*rb_root;
 };
