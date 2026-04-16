@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-2.0-only */
 /* Modifications: Add typedefs */
-#ifndef _LINUX_RBTREE_H
-#define _LINUX_RBTREE_H
+#ifndef _LINUX_SCHED_RBTREE_H
+#define _LINUX_SCHED_RBTREE_H
 
 struct list_head {
 	struct list_head *next, *prev;
