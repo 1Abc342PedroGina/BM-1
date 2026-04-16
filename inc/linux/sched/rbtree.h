@@ -3,6 +3,10 @@
 #ifndef _LINUX_RBTREE_H
 #define _LINUX_RBTREE_H
 
+struct list_head {
+	struct list_head *next, *prev;
+};
+
 struct rb_node {
 	unsigned long  __rb_parent_color;
 	struct rb_node *rb_right;
@@ -50,5 +54,23 @@ struct rb_root_linked {
 #define RB_ROOT (struct rb_root) { NULL, }
 #define RB_ROOT_CACHED (struct rb_root_cached) { {NULL, }, NULL }
 #define RB_ROOT_LINKED (struct rb_root_linked) { {NULL, }, NULL }
+
+struct ns_tree_root {
+	struct rb_root ns_rb;
+	struct list_head ns_list_head;
+};
+
+typedef struct {
+	int __aligned(sizeof(int)) counter;
+} atomic_t;
+
+struct ns_tree {
+	uint64_t ns_id;
+	atomic_t __ns_ref_active;
+	struct ns_tree_node ns_unified_node;
+	struct ns_tree_node ns_tree_node;
+	struct ns_tree_node ns_owner_node;
+	struct ns_tree_root ns_owner_root;
+};
 
 #endif
