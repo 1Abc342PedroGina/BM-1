@@ -138,6 +138,7 @@ struct tss_struct {
 	long	ldt;		/* 16 high bits zero */
 	long	trace_bitmap;	/* bits: trace 0, bitmap 16-31 */
 	struct i387_struct i387;
+    struct task_struct		thread;
 };
 
 
