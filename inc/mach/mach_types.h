@@ -11,6 +11,7 @@
 #include <c++/Kern.h>
 #else
 #include <mach/asm.h>
+#endif
 #include <linux/rbtree.h>
 #include <mach/host_info.h>
 #include <mach/host_notify.h>
