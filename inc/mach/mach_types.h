@@ -68,6 +68,8 @@
 #error
 #endif
 #include <mach/macro_help.h>
+#include <mach-o/object.h>
+#include <mach-o/executable.h>
 #include <mach/ipc_host.h>
 #include <mach/ipc_port.h>
 #include <mach/kalloc.h>
