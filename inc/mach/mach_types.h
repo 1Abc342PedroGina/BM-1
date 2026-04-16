@@ -62,7 +62,7 @@
 #include <mach/cpu.h>
 #ifdef __x86_64__
 #include <mach/i386/apple.h>
-#elif __aarch64__
+#elif defined(__aarch64__) || defined(__arm64__)
 #include <mach/arm64/apple.h>
 #else
 #error
